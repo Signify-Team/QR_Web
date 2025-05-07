@@ -1,96 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signify – Learn Sign Language</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signify – Learn Sign Language</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-  <div class="container">
-    <!-- App Icon -->
-    <div class="app-icon">
+    <div class="container">
+      <!-- App Icon -->
+      <div class="app-icon">
         <img src="assets/koala_icon.png" alt="Signify App Icon" />
-    </div>
-    
-    <h1>Welcome to Signify!</h1>
+      </div>
 
-    <!-- Demo Video -->
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-              frameborder="0" allowfullscreen></iframe>
-    </div>
+      <h1>Welcome to Signify!</h1>
 
-    <!-- Usage Guide -->
-    <section class="guide">
+      <!-- Demo Video -->
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Usage Guide -->
+      <section class="guide">
         <h2>How to Use</h2>
         <p>
-        🎉 To get started, simply fill in the registration form at the bottom of the page. You’ll receive access via TestFlight to try out Signify before the full release.
-        <br><br>
-        📲 Once you've joined:
-        <br>
-        1. Open the app and choose your preferred sign language – ASL (American Sign Language) or TİD (Turkish Sign Language).<br>
-        2. Start your learning journey with interactive lessons, real-time gesture recognition, and feedback.<br>
-        3. Earn badges, track your progress, and build daily learning streaks as you master sign language at your own pace.
+          🎉 To get started, simply fill in the registration form at the bottom
+          of the page. You’ll receive access via TestFlight to try out Signify
+          before the full release.
+          <br /><br />
+          📲 Once you've joined:
+          <br />
+          1. Open the app and choose your preferred sign language – ASL
+          (American Sign Language) or TİD (Turkish Sign Language).<br />
+          2. Start your learning journey with interactive lessons, real-time
+          gesture recognition, and feedback.<br />
+          3. Earn badges, track your progress, and build daily learning streaks
+          as you master sign language at your own pace.
         </p>
-    </section>
-  
-        <!-- Where to Reach Us -->
-        <section class="contact">
-            <h2>Where to Reach Us</h2>
-            <p>You can follow and contact us through our social media pages below:</p>
-          </section>
-      
-          <!-- Social Links -->
-        <div class="social-icons">
-            <a href="https://www.instagram.com/signifyproject/" target="_blank">
-            <img src="assets/insta_icon.png" alt="Instagram" />
-            </a>
-            <a href="mailto:signify.team.app@gmail.com" target="_blank">
-            <img src="assets/mail_icon.png" alt="Mail" />
-            </a>
-            <a href="https://projectsignify.my.canva.site/" target="_blank">
-            <img src="assets/website_icon.png" alt="Website" />
-            </a>
-        </div>
-  
-      
+      </section>
 
-    <!-- Registration Form -->
-    <section class="form">
+      <!-- Where to Reach Us -->
+      <section class="contact">
+        <h2>Where to Reach Us</h2>
+        <p>
+          You can follow and contact us through our social media pages below:
+        </p>
+      </section>
+
+      <!-- Social Links -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/signifyproject/" target="_blank">
+          <img src="assets/insta_icon.png" alt="Instagram" />
+        </a>
+        <a href="mailto:signify.team.app@gmail.com" target="_blank">
+          <img src="assets/mail_icon.png" alt="Mail" />
+        </a>
+        <a href="https://projectsignify.my.canva.site/" target="_blank">
+          <img src="assets/website_icon.png" alt="Website" />
+        </a>
+      </div>
+
+      <!-- Registration Form -->
+      <section class="form">
         <h2>Join TestFlight</h2>
         <div class="form-container">
           <form action="https://formspree.io/f/xgvkyovg" method="POST">
-            <input type="text" name="name" placeholder="Your name and surname" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <input type="text" name="_gotcha" style="display:none">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name and surname"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <input type="text" name="_gotcha" style="display: none" />
             <button type="submit">Get Invite</button>
           </form>
         </div>
       </section>
-      
-
-  </div>
-</body>
-<script>
+    </div>
+  </body>
+  <script>
     function toggleTheme() {
       const body = document.body;
-      body.classList.toggle('dark');
-      const isDark = body.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+      body.classList.toggle("dark");
+      const isDark = body.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      document.querySelector(".theme-toggle").textContent = isDark
+        ? "☀️"
+        : "🌙";
     }
-  
+
     // Apply saved theme on load
     window.onload = () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark');
-        document.querySelector('.theme-toggle').textContent = '☀️';
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        document.querySelector(".theme-toggle").textContent = "☀️";
       }
     };
   </script>
-  
 </html>
